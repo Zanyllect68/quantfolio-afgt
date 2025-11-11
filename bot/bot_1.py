@@ -11,3 +11,5 @@ rates = mt5.copy_rates_from_pos('XAUUSD', mt5.TIMEFRAME_M1, 0,9999)
 tabla_precios = pd.DataFrame(rates)
 tabla_precios['time'] = pd.to_datetime(tabla_precios['time'], unit='s')
 print(tabla_precios.head())
+
+mt5.shutdown()
